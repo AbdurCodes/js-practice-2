@@ -1,7 +1,7 @@
 function confirmAge(age){
   if (age >= 18){
     alert("You are of ripe age.");
-    return 1;
+    return true;
   }
   else {
     let consent = confirm("Can you take your own responsibility?");
@@ -15,12 +15,11 @@ function confirmAge(age){
 }
 
 function grantAccess(age) {
-  if (confirmAge(age)){
-    alert("Access granted!");
+  if (!confirmAge(age)){
+    return alert("Access denied!");
   }
-  else{
-    alert("Access denied!");
-  }
+  
+  alert("Access granted!");
 }
 
 let age = prompt("Your age plz: ");
