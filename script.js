@@ -1,7 +1,7 @@
 function confirmAge(age){
   if (age >= 18){
     alert("You are of ripe age.");
-    return 0;
+    return 1;
   }
   else {
     let consent = confirm("Can you take your own responsibility?");
