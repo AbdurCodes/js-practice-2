@@ -10,7 +10,39 @@
 
 <body>
   Hello world
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
+
+<script>
+  // function capitalize (word){
+  //     let firstChar = word[0].toUpperCase();
+  //     let slicedWord = word.slice(1);
+  //     let slicedWordlength = slicedWord.length;
+  //     let restChars = "";
+  //     for (let i=0; i<slicedWordlength; i++){
+  //       slicedWord[i] = slicedWord[i].toLowerCase();
+  //       restChars += slicedWord[i];
+  //     }
+  //     return firstChar+restChars;
+  // }
+
+  // the above code did not work: issue on line 23: Reason: JavaScript does not allow directly changing characters in a string by index. 
+
+  function capitalize (word){
+      let firstChar = word[0].toUpperCase();
+      let slicedWord = word.slice(1);
+      let slicedWordlength = slicedWord.length;
+      let restChars = "";
+      for (let i=0; i<slicedWordlength; i++){
+        restChars +=  slicedWord[i].toLowerCase();
+      }
+      return firstChar+restChars;
+  }
+
+  let enteredWord = prompt("Plz enter the word to capitalize", "abdur");
+  let result = enteredWord ? capitalize(enteredWord) : "No word entered"; 
+  alert(result);
+
+</script>
 
 </html>
