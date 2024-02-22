@@ -39,9 +39,19 @@
       return firstChar+restChars;
   }
 
-  let enteredWord = prompt("Plz enter the word to capitalize", "abdur");
+  // let enteredWord = prompt("Plz enter the word to capitalize", "abdur");
   let result = enteredWord ? capitalize(enteredWord) : "No word entered"; 
-  alert(result);
+  // alert(result);
+
+
+  //--------------------------------------------------------------
+
+  // a function that takes a string and returns the very last letter of that string
+
+  function lastLetter (word) {
+    let wordLength = word.length;
+    return word[wordLength-1];
+  } 
 
 </script>
 
